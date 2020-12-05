@@ -1,5 +1,5 @@
 body{
-    /*background-color: green;*/
+    background-color: lightgray;
 }
 body h1{
     text-align: center;
@@ -16,7 +16,7 @@ body h1{
 #net{
     z-index: -10; 
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);
 }
 #sq1{
@@ -29,20 +29,15 @@ body h1{
     background-color: green;
 }
 #sq4{
-    background-color: red;
+    background-color: yellow;
 }
 #sq5{
-    background-color: red;
+    background-color: purple;
 }
 #sq6{
-    background-color: blue;
+    background-color: orange;
 }
-#sq7{
-    background-color: green;
-}
-#sq8{
-    background-color: red;
-}
+
 #keeper{
     z-index: 10;
     position: absolute;
