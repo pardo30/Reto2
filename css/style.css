@@ -1,0 +1,62 @@
+body{
+    /*background-color: green;*/
+}
+body h1{
+    text-align: center;
+}
+#goal{
+    width: 70%;
+    height: 70%;
+    background-color: black;
+    margin: auto;
+    border-top: 12px solid black;
+    border-left: 12px solid black; 
+    border-right: 12px solid black;
+}
+#net{
+    z-index: -10; 
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 250px);
+}
+#sq1{
+    background-color: red;
+}
+#sq2{
+    background-color: blue;
+}
+#sq3{
+    background-color: green;
+}
+#sq4{
+    background-color: red;
+}
+#sq5{
+    background-color: red;
+}
+#sq6{
+    background-color: blue;
+}
+#sq7{
+    background-color: green;
+}
+#sq8{
+    background-color: red;
+}
+#keeper{
+    z-index: 10;
+    position: absolute;
+    left: 45%;
+    bottom: 20%;
+}
+#toy{
+    width: 120px;
+    height: 300px;
+    background-color: brown;
+}
+#sphere{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: yellow;
+}
