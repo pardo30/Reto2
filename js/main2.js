@@ -61,11 +61,27 @@ function dragstart(event){
   console.log("dragStart")
   event.dataTransfer.setData("text/plain", event.target.id);
 }
-
 function dragover(event) {
   console.log("dragOver")
   event.preventDefault();
 }
+
+function dragenter(event) {
+  console.log("dragOver")
+  event.preventDefault();
+  if (event.target.className == "netsq") {
+    event.target.style.border = "thick dotted #a30000";
+  }
+}
+
+function dragleave(event) {
+  console.log("dragOver")
+  event.preventDefault();
+  if (event.target.className == "netsq") {
+    event.target.style.border = "";
+  } 
+}
+
 
 function drop(event) {
   console.log("drop")
@@ -78,6 +94,7 @@ function drop(event) {
   } else {
     const result = document.getElementById("result").innerHTML = "GOAL!";
   }
+  document.getElementById("restartButton").style.display = 'block';
   toyPosition();
 }
 

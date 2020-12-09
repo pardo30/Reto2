@@ -4,10 +4,13 @@ body{
 }
 body h1{
     text-align: center;
+    font-size: 32px;
+    margin: 20px auto;
 }
 body h2{
     text-align: center;
-    font-size: 1em;
+    font-size: 24px;
+    margin: 10px auto;
 }
 #goal{
     width: 800px;
@@ -17,6 +20,7 @@ body h2{
     border-top: 12px solid black;
     border-left: 12px solid black; 
     border-right: 12px solid black;
+    color: #a30000
 }
 #net{
     z-index: -10; 
@@ -30,46 +34,52 @@ body h2{
     justify-content: center;
     align-items: center;
 }
+#keeper{
+    width: 100%;
+    height: 30git vh;
+    background-color: green;
+}
 .position{
     display: none;
 }
 #img-sq1{
     width: 300px;
     position: absolute;
-    left: 20%;
-    bottom: 30%;
+    left: 25%;
+    top: 150px;
 }
 #img-sq2{
     height: 400px;
     position: absolute;
-    left: 42%;
-    bottom: 30%;
+    left: 45%;
+    top: 150px;
 }
 #img-sq3{
     width: 300px;
     position: absolute;
-    right: 20%;
-    bottom: 30%;
+    right: 30%;
+    top: 150px;
 }
 #img-sq4{
     width: 350px;
     position: absolute;
-    left: 20%;
-    bottom: 20%;
+    left: 25%;
+    top: 500px;
 }
 #img-sq5{
     height: 280px;
     position: absolute;
     left: 45%;
-    bottom: 18%;
+    top: 380px;
 }
 #img-sq6{
     width: 350px;
     position: absolute;
-    right: 20%;
-    bottom: 20%;
+    right: 25%;
+    top: 500px;
 }
 #sphere{
+    float: left;
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -78,9 +88,10 @@ body h2{
     width: 150px;
 }
 .answer{
-    display:none;
+    float: right;
+    display: none;
     width: 800px;
-    margin: auto;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -91,6 +102,7 @@ body h2{
     margin-bottom: 20px;
 }
 #restartButton{
+    display: none;
     width: 100px;
     align-items: right;
     font-size: 1.5em;
