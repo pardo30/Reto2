@@ -81,6 +81,9 @@ function drop(event) {
   toyPosition();
 }
 
+function restart(){
+  location.reload();
+}
   
 
 

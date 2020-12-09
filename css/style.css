@@ -1,8 +1,13 @@
 body{
     background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body h1{
     text-align: center;
+}
+body h2{
+    text-align: center;
+    font-size: 1em;
 }
 #goal{
     width: 800px;
@@ -18,24 +23,7 @@ body h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);
-}
-#sq1{
-    background-color: red;
-}
-#sq2{
-    background-color: blue;
-}
-#sq3{
-    background-color: green;
-}
-#sq4{
-    background-color: yellow;
-}
-#sq5{
-    background-color: purple;
-}
-#sq6{
-    background-color: orange;
+    background-image: url(../img/net.jpg) ;
 }
 .netsq{
     display: flex;
@@ -89,9 +77,23 @@ body h1{
 .ballbw{
     width: 150px;
 }
-#result{
+.answer{
+    display:none;
     width: 800px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#result{
     font-size: 2em;
     text-align: right;
+    margin-bottom: 20px;
+}
+#restartButton{
+    width: 100px;
+    align-items: right;
+    font-size: 1.5em;
+    text-align: right;
+    border-radius: 10%;
 }
