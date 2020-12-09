@@ -5,8 +5,8 @@ body h1{
     text-align: center;
 }
 #goal{
-    width: 70%;
-    height: 70%;
+    width: 800px;
+    height: 500px;
     background-color: black;
     margin: auto;
     border-top: 12px solid black;
@@ -42,28 +42,55 @@ body h1{
     justify-content: center;
     align-items: center;
 }
-#keeper{
-    z-index: 10;
+.position{
+    display: none;
+}
+#img-sq1{
+    width: 300px;
     position: absolute;
-    left: 45%;
+    left: 20%;
+    bottom: 30%;
+}
+#img-sq2{
+    height: 400px;
+    position: absolute;
+    left: 42%;
+    bottom: 30%;
+}
+#img-sq3{
+    width: 300px;
+    position: absolute;
+    right: 20%;
+    bottom: 30%;
+}
+#img-sq4{
+    width: 350px;
+    position: absolute;
+    left: 20%;
     bottom: 20%;
 }
-#toy{
-    width: 120px;
-    height: 300px;
-    /*background-color: brown;*/
+#img-sq5{
+    height: 280px;
+    position: absolute;
+    left: 45%;
+    bottom: 18%;
 }
-.position{
-    height: inherit;
+#img-sq6{
+    width: 350px;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
 }
 #sphere{
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    background-color: gray;
+}
+.ballbw{
+    width: 150px;
 }
 #result{
-    width: 70%;
+    width: 800px;
     margin: auto;
     font-size: 2em;
     text-align: right;

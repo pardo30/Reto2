@@ -33,34 +33,53 @@ function netSelection(){
 let net = netSelection();
 console.log(net);
 
-//TOY OPTIONS
-
+//TOY POSITION
+function toyPosition(){
+    if(net == "sq1"){
+      document.getElementById("img-sq1").style.display = 'block';
+      document.getElementById("img-sq5").style.display = 'none';  
+    }else if(net == "sq2"){
+      document.getElementById("img-sq2").style.display = 'block';
+      document.getElementById("img-sq5").style.display = 'none';  
+    }else if(net == "sq3"){
+      document.getElementById("img-sq3").style.display = 'block';
+      document.getElementById("img-sq5").style.display = 'none';  
+    }else if(net == "sq4"){
+      document.getElementById("img-sq4").style.display = 'block';
+      document.getElementById("img-sq5").style.display = 'none';  
+    }else if(net == "sq6"){
+      document.getElementById("img-sq6").style.display = 'block';
+      document.getElementById("img-sq5").style.display = 'none';  
+    }else{
+      document.getElementById("img-sq5").style.display = 'block'; 
+    }  
+}
 
 //DRAG AND DROP BALL
 
 function dragstart(event){
-    console.log("dragStart")
-    event.dataTransfer.setData("text/plain", event.target.id);
+  console.log("dragStart")
+  event.dataTransfer.setData("text/plain", event.target.id);
 }
 
 function dragover(event) {
-    console.log("dragOver")
-    event.preventDefault();
-  }
-  
+  console.log("dragOver")
+  event.preventDefault();
+}
+
 function drop(event) {
-    console.log("drop")
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text/plain");
-    event.target.appendChild(document.getElementById(data));
-    event.dataTransfer.clearData();
-    let boxId = event.target.getAttribute("id");
-    if (boxId == net) {
-      const result = document.getElementById("result").innerHTML = "SAFE!";
-    } else {
-      const result = document.getElementById("result").innerHTML = "GOAL!";
-    }
+  console.log("drop")
+  event.preventDefault();
+  event.target.appendChild(document.getElementById("sphere"));
+  event.dataTransfer.clearData();
+  let boxId = event.target.getAttribute("id");
+  if (boxId == net) {
+    const result = document.getElementById("result").innerHTML = "SAFE!";
+  } else {
+    const result = document.getElementById("result").innerHTML = "GOAL!";
   }
+  toyPosition();
+}
 
   
 
