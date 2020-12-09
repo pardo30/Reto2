@@ -1,29 +1,3 @@
-//DRAG AND DROP BALL
-
-function dragstart(event){
-    console.log("dragStart")
-    event.dataTransfer.setData("text/plain", event.target.id);
-}
-
-function dragover(event) {
-    console.log("dragOver")
-    event.preventDefault();
-  }
-  
-function drop(event) {
-    console.log("drop")
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text/plain");
-    event.target.appendChild(document.getElementById(data));
-    event.dataTransfer.clearData();
-    let boxId = event.target.getAttribute("id");
-    return boxId
-  }
-
-let shot = drop();
-console.log (shot);
-
-
 // KEEPER MOVEMENT
 
 let keeper = document.getElementById("toy");
@@ -58,3 +32,37 @@ function netSelection(){
 }
 let net = netSelection();
 console.log(net);
+
+//TOY OPTIONS
+
+
+//DRAG AND DROP BALL
+
+function dragstart(event){
+    console.log("dragStart")
+    event.dataTransfer.setData("text/plain", event.target.id);
+}
+
+function dragover(event) {
+    console.log("dragOver")
+    event.preventDefault();
+  }
+  
+function drop(event) {
+    console.log("drop")
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text/plain");
+    event.target.appendChild(document.getElementById(data));
+    event.dataTransfer.clearData();
+    let boxId = event.target.getAttribute("id");
+    if (boxId == net) {
+      const result = document.getElementById("result").innerHTML = "SAFE!";
+    } else {
+      const result = document.getElementById("result").innerHTML = "GOAL!";
+    }
+  }
+
+  
+
+
+
