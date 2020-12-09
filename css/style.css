@@ -37,7 +37,11 @@ body h1{
 #sq6{
     background-color: orange;
 }
-
+.netsq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #keeper{
     z-index: 10;
     position: absolute;
@@ -53,5 +57,5 @@ body h1{
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    background-color: yellow;
+    background-color: gray;
 }

@@ -12,12 +12,12 @@
     </header>
     <article id="goal">
         <div id="net">
-            <div class="netsq" id="sq1">1</div>
-            <div class="netsq"id="sq2">2</div>
-            <div class="netsq"id="sq3">3</div>
-            <div class="netsq"id="sq4">4</div>
-            <div class="netsq"id="sq5">5</div>
-            <div class="netsq"id="sq6">6</div>
+            <div class="netsq" id="sq1" ondrop="drop(event);" ondragover="dragover(event);"></div>
+            <div class="netsq"id="sq2" ondrop="drop(event);" ondragover="dragover(event);"></div>
+            <div class="netsq"id="sq3" ondrop="drop(event);" ondragover="dragover(event);"></div>
+            <div class="netsq"id="sq4" ondrop="drop(event);" ondragover="dragover(event);"></div>
+            <div class="netsq"id="sq5" ondrop="drop(event);" ondragover="dragover(event);"></div>
+            <div class="netsq"id="sq6" ondrop="drop(event);" ondragover="dragover(event);"></div>
         </div>
         <div id="frame">
 
@@ -26,9 +26,9 @@
     <article id="keeper">
         <div id="toy"></div>
     </article>
-    <article id="ball" draggable="true">
+    <article id="ball" draggable="true" ondragstart="dragstart(event);">
         <div id="sphere"></div>
     </article>
-<script src="js/main.js"></script>
+<script src="js/main2.js"></script>
 </body>
 </html>
