@@ -93,15 +93,16 @@ function drop(event) {
 function compare(){
   let keeperMovement = netSelection();
   if (netSpace == keeperMovement) {
-    const result = document.getElementById("result").innerHTML = "SAFE!";
+    let result = "SAFE! Perhaps there will be another occasion.";
+    document.getElementById("result").innerHTML = result;
   } else {
-    const result = document.getElementById("result").innerHTML = "GOAL!";
+    let result = "GOAL! Well done."
+    document.getElementById("result").innerHTML = result;
   }
   document.getElementById("restartButton").style.display = 'block';
   keeperPosition(keeperMovement);
   console.log("keeperMovement " + keeperMovement);
   console.log("netSpace "+ netSpace);
-
 }
 
 function restart(){
