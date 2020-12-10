@@ -37,21 +37,46 @@ function netSelection(){
 function keeperPosition(keeperMovement){
     if(keeperMovement == "sq1"){
       document.getElementById("img-sq1").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';  
+      document.getElementById("img-sq5").style.display = 'none';
+      document.getElementById("img-sq2").style.display = 'none';
+      document.getElementById("img-sq3").style.display = 'none';
+      document.getElementById("img-sq4").style.display = 'none';
+      document.getElementById("img-sq6").style.display = 'none';  
     }else if(keeperMovement == "sq2"){
       document.getElementById("img-sq2").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';  
+      document.getElementById("img-sq5").style.display = 'none';
+      document.getElementById("img-sq1").style.display = 'none';
+      document.getElementById("img-sq3").style.display = 'none';
+      document.getElementById("img-sq4").style.display = 'none';
+      document.getElementById("img-sq6").style.display = 'none';  
     }else if(keeperMovement == "sq3"){
       document.getElementById("img-sq3").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';  
+      document.getElementById("img-sq5").style.display = 'none';
+      document.getElementById("img-sq1").style.display = 'none';
+      document.getElementById("img-sq2").style.display = 'none';
+      document.getElementById("img-sq4").style.display = 'none';
+      document.getElementById("img-sq6").style.display = 'none';  
     }else if(keeperMovement == "sq4"){
       document.getElementById("img-sq4").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';  
+      document.getElementById("img-sq5").style.display = 'none';
+      document.getElementById("img-sq1").style.display = 'none';
+      document.getElementById("img-sq2").style.display = 'none';
+      document.getElementById("img-sq3").style.display = 'none';
+      document.getElementById("img-sq6").style.display = 'none';  
     }else if(keeperMovement == "sq6"){
       document.getElementById("img-sq6").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';  
+      document.getElementById("img-sq5").style.display = 'none';
+      document.getElementById("img-sq1").style.display = 'none';
+      document.getElementById("img-sq2").style.display = 'none';
+      document.getElementById("img-sq3").style.display = 'none';
+      document.getElementById("img-sq4").style.display = 'none';  
     }else{
-      document.getElementById("img-sq5").style.display = 'block'; 
+      document.getElementById("img-sq5").style.display = 'block';
+      document.getElementById("img-sq1").style.display = 'none';
+      document.getElementById("img-sq2").style.display = 'none';
+      document.getElementById("img-sq3").style.display = 'none';
+      document.getElementById("img-sq4").style.display = 'none';  
+      document.getElementById("img-sq6").style.display = 'none';
     }  
 }
 
