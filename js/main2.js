@@ -1,53 +1,53 @@
+
+var netSpace; //1 of 6 net Spaces
+var keeperMovement; //Positions of keeper 
+
 // KEEPER MOVEMENT
 
-let keeper = document.getElementById("toy");
-
-function randomMovement(){
-  let mov = Math.random();
-  return mov
-}
-let mov = randomMovement();
-console.log(mov)
-
 function netSelection(){
+  function randomMovement(){
+    let mov = Math.random();
+    return mov
+  }
+
+  let mov = randomMovement();
+  
   if (mov <= (1/6)){
-    let net = "sq1"
-    return net
+    let keeperMovement = "sq1"
+    return keeperMovement
   } else if((mov > (1/6)) & (mov <= (2/6))){
-    let net = "sq2"
-    return net
+    let keeperMovement = "sq2"
+    return keeperMovement
   } else if((mov > (2/6)) & (mov <= (3/6))){
-    let net = "sq3"
-    return net
+    let keeperMovement = "sq3"
+    return keeperMovement
   } else if((mov > (3/6)) & (mov <= (4/6))){
-    let net = "sq4"
-    return net
+    let keeperMovement = "sq4"
+    return keeperMovement
   }else if((mov > (4/6)) & (mov <= (5/6))){
-    let net = "sq5"
-    return net
+    let keeperMovement = "sq5"
+    return keeperMovement
   } else {
-    let net = "sq6"
-    return net
+    let keeperMovement = "sq6"
+    return keeperMovement
   }
 }
-let net = netSelection();
-console.log(net);
 
-//TOY POSITION
-function toyPosition(){
-    if(net == "sq1"){
+//KEEPER POSITION
+function keeperPosition(keeperMovement){
+    if(keeperMovement == "sq1"){
       document.getElementById("img-sq1").style.display = 'block';
       document.getElementById("img-sq5").style.display = 'none';  
-    }else if(net == "sq2"){
+    }else if(keeperMovement == "sq2"){
       document.getElementById("img-sq2").style.display = 'block';
       document.getElementById("img-sq5").style.display = 'none';  
-    }else if(net == "sq3"){
+    }else if(keeperMovement == "sq3"){
       document.getElementById("img-sq3").style.display = 'block';
       document.getElementById("img-sq5").style.display = 'none';  
-    }else if(net == "sq4"){
+    }else if(keeperMovement == "sq4"){
       document.getElementById("img-sq4").style.display = 'block';
       document.getElementById("img-sq5").style.display = 'none';  
-    }else if(net == "sq6"){
+    }else if(keeperMovement == "sq6"){
       document.getElementById("img-sq6").style.display = 'block';
       document.getElementById("img-sq5").style.display = 'none';  
     }else{
@@ -67,7 +67,6 @@ function dragover(event) {
 }
 
 function dragenter(event) {
-  console.log("dragOver")
   event.preventDefault();
   if (event.target.className == "netsq") {
     event.target.style.border = "thick dotted #a30000";
@@ -75,7 +74,6 @@ function dragenter(event) {
 }
 
 function dragleave(event) {
-  console.log("dragOver")
   event.preventDefault();
   if (event.target.className == "netsq") {
     event.target.style.border = "";
@@ -88,14 +86,22 @@ function drop(event) {
   event.preventDefault();
   event.target.appendChild(document.getElementById("sphere"));
   event.dataTransfer.clearData();
-  let boxId = event.target.getAttribute("id");
-  if (boxId == net) {
+  var boxId = event.target.getAttribute("id");
+  netSpace = boxId;
+}
+
+function compare(){
+  let keeperMovement = netSelection();
+  if (netSpace == keeperMovement) {
     const result = document.getElementById("result").innerHTML = "SAFE!";
   } else {
     const result = document.getElementById("result").innerHTML = "GOAL!";
   }
   document.getElementById("restartButton").style.display = 'block';
-  toyPosition();
+  keeperPosition(keeperMovement);
+  console.log("keeperMovement " + keeperMovement);
+  console.log("netSpace "+ netSpace);
+
 }
 
 function restart(){
