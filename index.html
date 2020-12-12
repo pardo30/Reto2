@@ -9,9 +9,19 @@
 <body>
     <header>
         <h1>Score a Goal</h1>
-        <h2>Drag the ball until the net spaces and drop it!</h2>
+        <h2>Drag the ball into net spaces and drop it!</h2>
     </header>
     <article id="goal">
+        <div id="keeper">
+            <div id="toy">
+                <img src="img/sq0.png" alt="Static Keeper" class="base" id="img-sq0">
+                <img src="img/sq1.png" alt="Corner Up Left" class="position" id="img-sq1">
+                <img src="img/sq2.png" alt="Center Up" class="position" id="img-sq2">
+                <img src="img/sq3.png" alt="Corner Up Right" class="position" id="img-sq3">
+                <img src="img/sq4.png" alt="Corner Down Left" class="position" id="img-sq4">
+                <img src="img/sq5.png" alt="Corner Down Right" class="position" id="img-sq5">
+                <img src="img/sq6.png" alt="Corner Down Right" class="position" id="img-sq6">
+            </div>
         <div id="net">
             <div class="netsq" id="sq1" ondrop="drop(event);compare();" ondragover="dragover(event);" ondragenter="dragenter(event);" ondragleave="dragleave(event);"></div>
             <div class="netsq"id="sq2" ondrop="drop(event);compare();" ondragover="dragover(event);" ondragenter="dragenter(event);" ondragleave="dragleave(event);"></div>
@@ -20,7 +30,6 @@
             <div class="netsq"id="sq5" ondrop="drop(event);compare();" ondragover="dragover(event);" ondragenter="dragenter(event);" ondragleave="dragleave(event);"></div>
             <div class="netsq"id="sq6" ondrop="drop(event);compare();" ondragover="dragover(event);" ondragenter="dragenter(event);" ondragleave="dragleave(event);"></div>
         </div>
-        <div id="frame">
         </div>
     </article>
     <article id="ball" draggable="true" ondragstart="dragstart(event);">
@@ -32,16 +41,8 @@
         <div id="result"></div>
         <button onclick="restart()" id="restartButton">AGAIN?</button> 
     </article>
-    <article id="keeper">
-        <div id="toy">
-            <img src="img/sq0.png" alt="Static Keeper" class="base" id="img-sq0">
-            <img src="img/sq1.png" alt="Corner Up Left" class="position" id="img-sq1">
-            <img src="img/sq2.png" alt="Center Up" class="position" id="img-sq2">
-            <img src="img/sq3.png" alt="Corner Up Right" class="position" id="img-sq3">
-            <img src="img/sq4.png" alt="Corner Down Left" class="position" id="img-sq4">
-            <img src="img/sq5.png" alt="Corner Down Right" class="position" id="img-sq5">
-            <img src="img/sq6.png" alt="Corner Down Right" class="position" id="img-sq6">
-        </div>
+    <article id="field">
+
     </article>
 
 <script src="js/main2.js"></script>
