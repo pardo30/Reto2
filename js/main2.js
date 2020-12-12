@@ -97,7 +97,7 @@ function compare(){
   } else {
     let result = "GOAL! Well done."
     document.getElementById("result").innerHTML = result;
-    document.getElementById("net").style.backgroundImage = "url(/img/netGoal.jpg)";
+    document.getElementById("net").style.backgroundImage = "url('/img/netGoal.jpg')";
   }
   document.getElementById("restartButton").style.display = 'block';
   keeperPosition(keeperMovement);
