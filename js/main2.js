@@ -9,9 +9,7 @@ function netSelection(){
     let mov = Math.random();
     return mov
   }
-
   let mov = randomMovement();
-  
   if (mov <= (1/6)){
     let keeperMovement = "sq1"
     return keeperMovement
@@ -35,51 +33,27 @@ function netSelection(){
 
 //KEEPER POSITION
 function keeperPosition(keeperMovement){
-    if(keeperMovement == "sq1"){
-      document.getElementById("img-sq1").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';
-      document.getElementById("img-sq2").style.display = 'none';
-      document.getElementById("img-sq3").style.display = 'none';
-      document.getElementById("img-sq4").style.display = 'none';
-      document.getElementById("img-sq6").style.display = 'none';  
-    }else if(keeperMovement == "sq2"){
-      document.getElementById("img-sq2").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';
-      document.getElementById("img-sq1").style.display = 'none';
-      document.getElementById("img-sq3").style.display = 'none';
-      document.getElementById("img-sq4").style.display = 'none';
-      document.getElementById("img-sq6").style.display = 'none';  
-    }else if(keeperMovement == "sq3"){
-      document.getElementById("img-sq3").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';
-      document.getElementById("img-sq1").style.display = 'none';
-      document.getElementById("img-sq2").style.display = 'none';
-      document.getElementById("img-sq4").style.display = 'none';
-      document.getElementById("img-sq6").style.display = 'none';  
-    }else if(keeperMovement == "sq4"){
-      document.getElementById("img-sq4").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';
-      document.getElementById("img-sq1").style.display = 'none';
-      document.getElementById("img-sq2").style.display = 'none';
-      document.getElementById("img-sq3").style.display = 'none';
-      document.getElementById("img-sq6").style.display = 'none';  
-    }else if(keeperMovement == "sq6"){
-      document.getElementById("img-sq6").style.display = 'block';
-      document.getElementById("img-sq5").style.display = 'none';
-      document.getElementById("img-sq1").style.display = 'none';
-      document.getElementById("img-sq2").style.display = 'none';
-      document.getElementById("img-sq3").style.display = 'none';
-      document.getElementById("img-sq4").style.display = 'none';  
-    }else{
-      document.getElementById("img-sq5").style.display = 'block';
-      document.getElementById("img-sq1").style.display = 'none';
-      document.getElementById("img-sq2").style.display = 'none';
-      document.getElementById("img-sq3").style.display = 'none';
-      document.getElementById("img-sq4").style.display = 'none';  
-      document.getElementById("img-sq6").style.display = 'none';
-    }  
+  let toy = document.getElementById("img-sq0");
+  toy.setAttribute("id",`img-${keeperMovement}`);
+  if(keeperMovement == "sq1"){
+    toy.src = "./img/sq1.png"
+  }
+  if(keeperMovement == "sq2"){
+    toy.src = "./img/sq2.png"
+  }
+  if(keeperMovement == "sq3"){
+    toy.src = "./img/sq3.png"
+  }
+  if(keeperMovement == "sq4"){
+    toy.src = "./img/sq4.png"
+  }
+  if(keeperMovement == "sq5"){
+    toy.src = "./img/sq5.png"
+  }
+  if(keeperMovement == "sq6"){
+    toy.src = "./img/sq6.png"
+  }
 }
-
 //DRAG AND DROP BALL
 
 function dragstart(event){

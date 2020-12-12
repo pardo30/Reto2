@@ -42,6 +42,12 @@ body h2{
 .position{
     display: none;
 }
+#img-sq0{
+    height: 280px;
+    position: absolute;
+    left: 45%;
+    top: 380px;
+}
 #img-sq1{
     width: 300px;
     position: absolute;
@@ -67,10 +73,10 @@ body h2{
     top: 500px;
 }
 #img-sq5{
-    height: 280px;
+    height: 250px;
     position: absolute;
-    left: 45%;
-    top: 380px;
+    left: 42%;
+    top: 420px;
 }
 #img-sq6{
     width: 350px;
