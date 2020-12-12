@@ -84,7 +84,7 @@ function drop(event) {
   console.log("drop")
   event.preventDefault();
   event.target.appendChild(document.getElementById("sphere"));
-  event.dataTransfer.clearData();
+  // event.dataTransfer.clearData();
   var boxId = event.target.getAttribute("id");
   netSpace = boxId;
 }
