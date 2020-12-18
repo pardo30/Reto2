@@ -92,12 +92,12 @@ function drop(event) {
 function compare(){
   let keeperMovement = netSelection();
   if (netSpace == keeperMovement) {
-    let result = "SAFE! Perhaps there will be another occasion.";
+    let result = "SAVE! Perhaps there will be another occasion.";
     document.getElementById("result").innerHTML = result;
   } else {
     let result = "GOAL! Well done."
     document.getElementById("result").innerHTML = result;
-    document.getElementById("net").style.backgroundImage = "url('./img/netGoal.jpg')";
+    document.getElementById("net").style.backgroundImage = "url('../img/netGoal.jpg')";
   }
   document.getElementById("restartButton").style.display = 'block';
   keeperPosition(keeperMovement);

@@ -11,7 +11,7 @@
         <h1>Score a Goal</h1>
         <h2>Drag the ball into net spaces and drop it!</h2>
     </header>
-    <article id="goal">
+    <div id="goal">
         <div id="keeper">
             <div id="toy">
                 <img src="img/sq0.png" alt="Static Keeper" class="base" id="img-sq0">
@@ -31,19 +31,19 @@
             <div class="netsq"id="sq6" ondrop="drop(event);compare();" ondragover="dragover(event);" ondragenter="dragenter(event);" ondragleave="dragleave(event);"></div>
         </div>
         </div>
-    </article>
-    <article id="ball" draggable="true" ondragstart="dragstart(event);">
+    </div>
+    <div id="ball" draggable="true" ondragstart="dragstart(event);">
         <div id="sphere">
             <img src="img/balon.png" alt="football ball" class="ballbw">
         </div>
-    </article>
-    <article class="answer">
+    </div>
+    <div class="answer">
         <div id="result"></div>
         <button onclick="restart()" id="restartButton">AGAIN?</button> 
-    </article>
-    <article id="field">
+    </div>
+    <div id="field">
         <div class="lines"></div>
-    </article>
+    </div>
 
 <script src="js/main2.js"></script>
 </body>
