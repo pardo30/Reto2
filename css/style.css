@@ -27,7 +27,12 @@ body h2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);
+}
+.net{
     background-image: url(../img/net.jpg) ;
+}
+.netGoal{
+    background-image: url(../img/netGoal.jpg) ;
 }
 .netsq{
     display: flex;
